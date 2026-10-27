@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Niki fungi app</title>
+  <meta name="description" content="Lemezes gombák nemzetség szintű határozója saját fotótárral">
+  <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Niki fungi">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="icons/favicon-64.png">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app">
+    <main id="tabs">
+      <section class="tab" id="tab-hat" data-tab="hat"></section>
+      <section class="tab" id="tab-tab" data-tab="tab" hidden></section>
+      <section class="tab" id="tab-fot" data-tab="fot" hidden></section>
+      <section class="tab" id="tab-inf" data-tab="inf" hidden></section>
+      <section class="lap" id="nezet-n" hidden></section>
+      <section class="lap" id="nezet-p" hidden></section>
+    </main>
+    <nav id="tabbar" aria-label="Fülek"></nav>
+  </div>
+  <div id="retegek"></div>
+  <div id="uzenet" role="status" aria-live="polite" hidden></div>
+  <input type="file" id="in-kamera" accept="image/*" capture="environment" hidden>
+  <input type="file" id="in-konyvtar" accept="image/*" hidden>
+  <input type="file" id="in-mentes" accept="application/json,.json" hidden>
+  <noscript>A Niki fungi app működéséhez JavaScript szükséges.</noscript>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/exifr/exifr.lite.umd.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
